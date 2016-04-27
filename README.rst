@@ -4,7 +4,7 @@ django-shop-categories
 
 A extendable category app using django-mptt for django-shop.
 
-.. image:: https://travis-ci.org/fivethreeo/django-shop-categories.png?branch=master
+.. image:: https://travis-ci.org/fivethreeo/django-shop-categories.png?branch=develop
    :target: https://travis-ci.org/fivethreeo/django-shop-categories
 
 Installation
@@ -36,7 +36,7 @@ Running tests:
 Configuration
 -------------
 
-Add ``shop_categories`` to ``settings.INSTALLED_APPS``.
+Add ``shop_categories`` and ``treeadmin`` to ``settings.INSTALLED_APPS``.
 
 Set ``SHOP_PRODUCT_MODEL`` to ``shop_categories.models.defaults.product.default.CategoryProduct``.
 
@@ -81,7 +81,7 @@ In category.py:
             abstract = False
             app_label = 'app'
 
-Set ``SHOP_CATEGORIES_CATEGORY_MODEL`` to ``app.models.category.Category``
+Set ``SHOP_CATEGORIES_CATEGORY_MODEL`` to ``('app.models.category.Category, 'app')``
 
 Register your custom category model in admin.py:
 
